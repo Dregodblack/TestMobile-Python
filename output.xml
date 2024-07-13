@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.1 (Python 3.9.4 on win32)" generated="20211029 22:58:32.229" rpa="false" schemaversion="2">
+<suite id="s1" name="MobileAutomation" source="C:\Users\Andre\Desktop\Luis\Estudos\Cursos\PrimeHero - Curso\Automação Web Mobile\Tests\MobileAutomation.robot">
+<test id="s1-t1" name="CT01: Teste Mobile">
+<kw name="Abrir aplicativo" type="SETUP">
+<kw name="Set Appium Timeout" library="AppiumLibrary">
+<arg>60</arg>
+<doc>Sets the timeout in seconds used by various keywords.</doc>
+<status status="PASS" starttime="20211029 22:58:32.712" endtime="20211029 22:58:32.713"/>
+</kw>
+<kw name="Open Application" library="AppiumLibrary">
+<arg>http://localhost:4723/wd/hub</arg>
+<arg>automationName=uiautomator2</arg>
+<arg>deviceName=ZY3224F3S3</arg>
+<arg>platformName=Android</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>appPackage=com.google.android.youtube</arg>
+<arg>appActivity=com.google.android.youtube.HomeActivity</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://github.com/appium/appium/blob/master/docs/en/writing-running-appium/server-args.md
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211029 22:58:39.846" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20211029 22:58:39.837" endtime="20211029 22:58:39.846"/>
+</kw>
+<msg timestamp="20211029 22:58:39.849" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20211029 22:58:39.857" level="FAIL">WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\Andre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s ZY3224F3S3 install -g 'C:\\Program Files\\Appium\\resources\\app\\node_modules\\appium\\node_modules\\io.appium.settings\\apks\\settings_apk-debug.apk'' exited with code 1'; Stderr: 'adb: failed to install C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\io.appium.settings\apks\settings_apk-debug.apk: 
+Exception occurred while executing:
+android.os.ParcelableException: java.io.IOException: Requested internal only, but not enough space
+	at android.util.ExceptionUtils.wrap(ExceptionUtils.java:34)
+	at com.android.server.pm.PackageInstallerService.createSession(PackageInstallerService.java:422)
+	at com.android.server.pm.PackageManagerShellCommand.doCreateSession(PackageManagerShellCommand.java:1388)
+	at com.android.server.pm.PackageManagerShellCommand.runInstall(PackageManagerShellCommand.java:201)
+	at com.'; Code: '1'
+</msg>
+<status status="FAIL" starttime="20211029 22:58:32.714" endtime="20211029 22:58:39.857"/>
+</kw>
+<status status="FAIL" starttime="20211029 22:58:32.711" endtime="20211029 22:58:39.860"/>
+</kw>
+<kw name="Fechar aplicativo" type="TEARDOWN">
+<kw name="Close Application" library="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<kw name="Capture Page Screenshot" library="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<msg timestamp="20211029 22:58:39.870" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20211029 22:58:39.867" endtime="20211029 22:58:39.870"/>
+</kw>
+<msg timestamp="20211029 22:58:39.875" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20211029 22:58:39.878" level="FAIL">No application is open</msg>
+<status status="FAIL" starttime="20211029 22:58:39.865" endtime="20211029 22:58:39.878"/>
+</kw>
+<status status="FAIL" starttime="20211029 22:58:39.864" endtime="20211029 22:58:39.879">No application is open</status>
+</kw>
+<status status="FAIL" starttime="20211029 22:58:32.711" endtime="20211029 22:58:39.880">Setup failed:
+WebDriverException: Message: An unknown server-side error occurred while processing the command. Original error: Error executing adbExec. Original error: 'Command 'C:\\Users\\Andre\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe -P 5037 -s ZY3224F3S3 install -g 'C:\\Program Files\\Appium\\resources\\app\\node_modules\\appium\\node_modules\\io.appium.settings\\apks\\settings_apk-debug.apk'' exited with code 1'; Stderr: 'adb: failed to install C:\Program Files\Appium\resources\app\node_modules\appium\node_modules\io.appium.settings\apks\settings_apk-debug.apk: 
+Exception occurred while executing:
+android.os.ParcelableException: java.io.IOException: Requested internal only, but not enough space
+	at android.util.ExceptionUtils.wrap(ExceptionUtils.java:34)
+	at com.android.server.pm.PackageInstallerService.createSession(PackageInstallerService.java:422)
+	at com.android.server.pm.PackageManagerShellCommand.doCreateSession(PackageManagerShellCommand.java:1388)
+	at com.android.server.pm.PackageManagerShellCommand.runInstall(PackageManagerShellCommand.java:201)
+	at com.'; Code: '1'
+
+
+Also teardown failed:
+No application is open</status>
+</test>
+<doc>Aqui estão presentes os cenários e keywords que dizem a respeito sobre
+a Automação Mobile</doc>
+<status status="FAIL" starttime="20211029 22:58:32.232" endtime="20211029 22:58:39.883"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="MobileAutomation">MobileAutomation</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20211029 22:58:39.849" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg timestamp="20211029 22:58:39.875" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>
